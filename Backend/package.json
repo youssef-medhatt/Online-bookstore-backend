@@ -1,0 +1,42 @@
+{
+  "name": "Online-Bookstore",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^7.5.0",
+    "googleapis": "^146.0.0",
+    "html-to-text": "^9.0.5",
+    "ioredis": "^5.6.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.11.0",
+    "mongoose-sequence": "^6.0.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.10.0",
+    "pug": "^3.0.3",
+    "stripe": "^17.7.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.4.0",
+    "eslint": "^9.21.0",
+    "nodemon": "^3.1.9"
+  }
+}
