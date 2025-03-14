@@ -1,6 +1,10 @@
 import Redis from 'ioredis';
 
-const redis = new Redis(); // Connects to Redis at localhost:6379 by default
+// Use Railway Redis URL if available, otherwise fallback to localhost
+const redis = new Redis(process.env.REDIS_URL || 'redis://127.0.0.1:6379');
+
+redis.on('connect', () => console.log('Connected to Redis'));
+redis.on('error', (err) => console.error('Redis Error:', err));
 
 export const setCache = async (key, value, expiration = 3600) => {
   await redis.setex(key, expiration, JSON.stringify(value));
